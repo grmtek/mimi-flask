@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+ body {background-image: url("{{ url_for('static', filename='images/mars.jpg') }}");
+    background-size:     contain;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position:  center;              /* optional, center the image */
+    height: 100vh;
+     }
+
+</style>
+<head>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+  <body>
+  <div class="w3-content" style="max-width:1500px">
+    <header>
+      <div class="container">
+        <h1 class="w3-xlarge center"> Mimi's Life on Mars</h1>
+      </div>
+    </header>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+  </body>
+
+</html>
